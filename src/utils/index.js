@@ -6,9 +6,9 @@
 
 // const convertToObjectMongodb = id => Types.ObjectId(id)
 
-// const getInfoData = ({fields = [], object = {}}) => {
-//     return _.pick(object, fields)
-// }
+const getInfoData = ({ fields = [], object = {} }) => {
+    return _.pick(object, fields)
+}
 
 // const getSelectData = ( select = [] ) => {
 //     return Object.fromEntries(select.map(e => [e, 1]))
@@ -45,11 +45,11 @@
 //         return final
 // }
 
-// module.exports = {
-//     getInfoData,
-//     getSelectData,
-//     notSelectData,
-//     removeUndefinedObject,
-//     updateNestedObjectParser,
-//     convertToObjectMongodb
-// }
+module.exports = {
+    getInfoData,
+    // getSelectData,
+    // notSelectData,
+    // removeUndefinedObject,
+    // updateNestedObjectParser,
+    // convertToObjectMongodb
+}

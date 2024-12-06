@@ -15,8 +15,9 @@ const sendEmailLinkVerify = ({
 }) => {
     //
     try {
+
         const mailOption = {
-            from: 'ShopDEV <>',
+            from: 'ShopDEV <example@gmail.com>',
             to: toEmail,
             subject,
             text,
@@ -24,7 +25,6 @@ const sendEmailLinkVerify = ({
         }
 
         transport.sendMail(mailOption, (err, info) => {
-
             if (err) {
                 return console.log(err);
             }
@@ -51,7 +51,7 @@ const sendEmailToken = async (email = null) => {
         const content = replacePlaceHolder(
             template.tem_html,
             {
-                link_verify: `http://localhost:3056/cgp/welcome-back?token=${token}`
+                link_verify: `http://localhost:3056/v1/user/welcome-back?token=${token.tem_token}`
             }
         )
         // 4. send email
